@@ -26,31 +26,34 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             border-radius: 8px;
             margin-top: 2rem;
+            margin-bottom: 2rem;
         }
         
-        h1 {
+        h1, h2 {
             color: #2c3e50;
             margin-bottom: 1rem;
+        }
+
+        h1 {
             font-size: 2.5rem;
             text-align: center;
         }
         
-        p {
-            color: #666;
-            margin-bottom: 2rem;
-            text-align: center;
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
         }
         
-        .features {
+        p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section {
             background-color: #f8f9fa;
             padding: 1.5rem;
             border-radius: 6px;
-        }
-        
-        .features h2 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+            margin-bottom: 2rem;
         }
         
         ul {
@@ -62,6 +65,27 @@
             margin-bottom: 0.5rem;
             color: #555;
         }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .contact-card {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: auto;
+        }
         
         @media (max-width: 600px) {
             .container {
@@ -72,6 +96,10 @@
             h1 {
                 font-size: 2rem;
             }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -79,14 +107,42 @@
     <div class="container">
         <h1>Welcome!</h1>
         <p>This is a simple test page created by Claude.</p>
-        <div class="features">
+        
+        <section class="section">
             <h2>Features</h2>
             <ul>
                 <li>Simple and clean design</li>
                 <li>Responsive layout</li>
                 <li>Easy to modify</li>
             </ul>
-        </div>
+        </section>
+
+        <section class="section">
+            <h2>About Us</h2>
+            <p>We are a team dedicated to creating simple, elegant, and functional web solutions. Our focus is on delivering clean code and beautiful designs that work seamlessly across all devices.</p>
+            <p>Our mission is to make web development more accessible and enjoyable for everyone, from beginners to experienced developers.</p>
+        </section>
+
+        <section class="section">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3>General Inquiries</h3>
+                    <p>Email: info@example.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Technical Support</h3>
+                    <p>Email: support@example.com</p>
+                    <p>Phone: (555) 987-6543</p>
+                </div>
+            </div>
+        </section>
     </div>
+
+    <footer>
+        <p>© 2025 Fabrica Claude Test. All rights reserved.</p>
+        <p>Created with ❤️ by Claude</p>
+    </footer>
 </body>
 </html>
